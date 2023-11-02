@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>I Fix Tyre </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700,800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="css/animate.css">
+
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/jquery.timepicker.css">
+
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
+    <style>
+        .circular-container {
+            width: 100px;
+            /* Set the desired width and height for your circular container */
+            height: 100px;
+            border-radius: 50%;
+            /* Use border-radius to create a circular shape */
+            overflow: hidden;
+            /* Hide the overflowing parts of the image */
+        }
+    </style>
+    <!-- call svg Styling -->
+    <style>
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+        }
+
+        @import url("https://fonts.googleapis.com/css?family=Roboto");
+
+        @-webkit-keyframes come-in {
+            0% {
+                -webkit-transform: translatey(100px);
+                transform: translatey(100px);
+                opacity: 0;
+            }
+
+            30% {
+                -webkit-transform: translateX(-50px) scale(0.4);
+                transform: translateX(-50px) scale(0.4);
+            }
+
+            70% {
+                -webkit-transform: translateX(0px) scale(1.2);
+                transform: translateX(0px) scale(1.2);
+            }
+
+            100% {
+                -webkit-transform: translatey(0px) scale(1);
+                transform: translatey(0px) scale(1);
+                opacity: 1;
+            }
+        }
+
+        @keyframes come-in {
+            0% {
+                -webkit-transform: translatey(100px);
+                transform: translatey(100px);
+                opacity: 0;
+            }
+
+            30% {
+                -webkit-transform: translateX(-50px) scale(0.4);
+                transform: translateX(-50px) scale(0.4);
+            }
+
+            70% {
+                -webkit-transform: translateX(0px) scale(1.2);
+                transform: translateX(0px) scale(1.2);
+            }
+
+            100% {
+                -webkit-transform: translatey(0px) scale(1);
+                transform: translatey(0px) scale(1);
+                opacity: 1;
+            }
+        }
+
+
+
+
+        .floating-container {
+            z-index: 100;
+            position: fixed;
+            width: 100px;
+            height: 100px;
+            bottom: 0;
+            right: 0;
+            margin: 35px 25px;
+        }
+
+        .floating-container:hover {
+            height: 300px;
+        }
+
+        .floating-container:hover .floating-button {
+            box-shadow: 0 10px 25px rgba(40, 40, 41, 0.6);
+            -webkit-transform: translatey(5px);
+            transform: translatey(5px);
+            -webkit-transition: all 0.3s;
+            transition: all 0.3s;
+        }
+
+        .floating-container:hover .element-container .float-element:nth-child(1) {
+            -webkit-animation: come-in 0.4s forwards 0.2s;
+            animation: come-in 0.4s forwards 0.2s;
+        }
+
+        .floating-container:hover .element-container .float-element:nth-child(2) {
+            -webkit-animation: come-in 0.4s forwards 0.4s;
+            animation: come-in 0.4s forwards 0.4s;
+        }
+
+        .floating-container:hover .element-container .float-element:nth-child(3) {
+            -webkit-animation: come-in 0.4s forwards 0.6s;
+            animation: come-in 0.4s forwards 0.6s;
+        }
+
+        .floating-container .floating-button {
+            position: absolute;
+            width: 70px;
+            height: 70px;
+            background: #00BD56;
+            bottom: 0;
+            border: 3px solid rgb(251, 251, 251);
+            border-radius: 50%;
+            left: 0;
+            right: 0;
+            margin: auto;
+            color: white;
+            line-height: 65px;
+            text-align: center;
+            font-size: 23px;
+            z-index: 100;
+
+            cursor: pointer;
+            -webkit-transition: all 0.3s;
+            transition: all 0.3s;
+        }
+
+        .floating-container .float-element {
+            position: relative;
+            display: block;
+            border-radius: 50%;
+
+            width: 50px;
+            height: 50px;
+            margin: 15px auto;
+            color: white;
+            font-weight: 500;
+            text-align: center;
+            line-height: 50px;
+            z-index: 0;
+            opacity: 0;
+            -webkit-transform: translateY(100px);
+            transform: translateY(100px);
+        }
+
+        .floating-container .float-element .material-icons {
+            vertical-align: middle;
+            font-size: 16px;
+        }
+
+        .floating-container .float-element:nth-child(1) {
+            background: #ffd903;
+
+        }
+
+
+        .navbar .button {
+            font-size: 3vh;
+        }
+
+        .navbar-brand {
+            font-size: 3vh;
+        }
+
+        .wrap .top p a,
+        span {
+            color: #070707;
+        }
+
+        #background {
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            height: 100%;
+
+        }
+
+        #navbarDropdown {
+            color: white;
+        }
+
+        .text {
+            color: black;
+        }
+
+        .fix-img {
+            width: 100%;
+            height: 100%;
+            background-image: url(images/images12.png);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            background-size: cover;
+            color: black;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            position: relative;
+            isolation: isolate;
+
+        }
+
+        .fix-img h2 {
+            color: #ffffff;
+            font-weight: bold;
+        }
+
+        .fix-img::after {
+            content: '';
+            position: absolute;
+            z-index: -1;
+            inset: 0;
+            background: black;
+            opacity: .6;
+        }
+
+        .container {
+            color: #070707;
+        }
+
+        .bold {
+            font-weight: bold;
+        }
+    </style>
+    <!--  End call svg Styling -->
+</head>
+
+<body>
+
+    <div class="wrap" style="background-color: lightgreen; overflow-x: hidden;">
+        <div class=" container-fluid">
+            <div class="row">
+                <div class="col-lg-12  d-flex justify-content-end">
+                    <p class="mb-0 phone pl-md-2">
+                        <a href="Tel:+447916312844" class="mr-2 " style="font-size:3vh; color: black;"><span class=" fa fa-phone
+				  mr-1" style="color: black;"></span>
+                            +447916312844</a>
+                        <a href="mailto:contact@ifixtyre.com" style="font-size:3vh; color: black;"><span
+                                class="fa fa-paper-plane mr-1 " style="color: black;"></span>
+                            contact@ifixtyre.com</a>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar  navbar-expand-xl  navbar-dark overflow-x-hidden" style="background-color: #ff2d94;">
+		<div class="container-fluid">
+			<img src="images/logo-removebg-preview.png" alt="pic" width="120px">
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+				data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+				aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+				<ul class="navbar-nav ">
+					<li class="nav-item">
+						<a class="nav-link active  " aria-current="page" href="index.html">Home</a>
+					</li>
+
+					<li class="nav-item"><a href="mobiletyrefitting.html" class="nav-link active  ">Mobile
+							Tyre
+							Fitting</a></li>
+
+					<li class="nav-item"><a href="locking wheel nut.html" class="nav-link active ">Locking
+							Wheel Nut Removal</a></li>
+					<li class="nav-item "><a href="mobile tyre repair.html" class="nav-link active ">Mobile
+							Tyre Repair</a></li>
+					<li class="nav-item "><a href="breakdown.html" class="nav-link active ">Break-Down</a></li>
+					<li class="nav-item "><a href="jumpstart.html" class="nav-link active ">Jump-Start</a></li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+							data-bs-toggle="dropdown" aria-expanded="false">
+							Services
+						</a>
+						<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+							
+							<li><a class="dropdown-item" href="breakdown.html">BreakDown</a></li>
+							<li><a class="dropdown-item" href="jumpstart.html">Jumpstart</a></li>
+							<li><a class="dropdown-item" href="locking wheel nut.html">Lockwheel Nut Removal</a></li>
+							<li><a class="dropdown-item" href="mobiletyrefitting.html">Tyre Fitting</a></li>
+
+						</ul>
+					</li>
+
+					<!--<li class="nav-item"><a href="services.html" class="nav-link">Services</a></li> -->
+					<li class="nav-item "><a href="contact.php" class="nav-link active ">Contact
+							Us</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+    <!-- END nav -->
+
+    <!-- Serveice section -->
+    <div class="container-fluid fix-img">
+        <h2 id="down">"24-Hour Tyre Repair Near Me"</h2>
+        <button class="btn" style="background-color: #ff2d94; border: #ff2d94; display: flex; justify-self: center; "><a
+                href="#readmore">Read
+                More</a></button>
+    </div>
+    <!-- End serveie Section -->
+
+
+
+
+
+
+
+
+
+    <!-- Call SVG -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <div class="floating-container">
+        <a href="Tel:+447916312844">
+            <div class="floating-button"><svg style="height: 50px; width: 50px;" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24" id="Phone">
+                    <g data-name="Layer 2" fill="#ffd903" class="color000000 svgShape">
+                        <g data-name="phone" fill="#ffd903" class="color000000 svgShape">
+                            <rect width="10px" height="10px" opacity="0" fill="#ffd903" class="color000000 svgShape">
+                            </rect>
+                            <path
+                                d="M17.4 22A15.42 15.42 0 0 1 2 6.6 4.6 4.6 0 0 1 6.6 2a3.94 3.94 0 0 1 .77.07 3.79 3.79 0 0 1 .72.18 1 1 0 0 1 .65.75l1.37 6a1 1 0 0 1-.26.92c-.13.14-.14.15-1.37.79a9.91 9.91 0 0 0 4.87 4.89c.65-1.24.66-1.25.8-1.38a1 1 0 0 1 .92-.26l6 1.37a1 1 0 0 1 .72.65 4.34 4.34 0 0 1 .19.73 4.77 4.77 0 0 1 .06.76A4.6 4.6 0 0 1 17.4 22z"
+                                fill="#fff" class="color000000 svgShape"></path>
+                        </g>
+                    </g>
+                </svg></div>
+        </a>
+        <div class="element-container">
+
+
+
+        </div>
+    </div>
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 ">
+                <h1 class="text-center bg-light bold">Mobile Tyre Service</h1>
+                <p>Mobile tire services offer a versatile and indispensable solution for individuals encountering a variety of tire-related challenges during their travels. A common and often inconvenient scenario where these services are required is the occurrence of flat tires. Whether due to punctures, blowouts, or slow leaks, flat tires can bring a journey to a halt. Mobile tire services step in to provide swift and efficient on-the-spot tire replacement or repair, enabling drivers to continue their trips without the need for costly towing services or visits to repair shops. This aspect of mobile tire services is invaluable for minimising downtime and inconvenience.</p>
+                <p>When it comes to ensuring the optimal performance and safety of your vehicle, your choice of tyres and their condition play a crucial role. At IFIX TYRE, we take pride in offering a comprehensive mobile tyre service that caters to your every need. Whether you're looking for "Kwik Fit near me," "tyre fitting near me," "puncture repair near me," or specialized services like "mobile tyre fitting in Leeds" and "24-hour tyre repair near me," we've got you covered.</p>
+            </div>
+        </div>
+    </div>
+   
+
+    <div class="container bg-light">
+        <div class="row">
+            <div class="col-lg-12">
+                <h2 class="text-center bold">Kwik Fit Near Me</h2>
+            </div>
+        </div>
+    </div>
+    <div class="container mb-3 overflow-hidden">
+
+        <div class="row mt-4">
+
+            <div class="col-lg-6 col-sm-12 mb-2 text">
+                <h3 class="font-weight-bold">Convenient Access to Quality Service</h3>
+                <p>If you're searching for "Kwik Fit near me," IFIX TYRE is your local and mobile solution for expert
+                    tyre services. We understand the importance of quick and reliable tyre maintenance, and our team is
+                    strategically positioned to reach you promptly.
+                    Our goal is to provide you with convenient access to top-tier tyre services without the need to
+                    travel far. When you choose our "Kwik Fit near me" service, you're choosing convenience and quality
+                    that's just a phone call away.
+                </p>
+                <button class="btn mt-4" style="background-color:lightgreen; border:lightgreen;"><a
+                        href="tel:+447916312844">Give us a
+                        Call</a></button>
+
+            </div>
+            <div class="col-lg-6 col-sm-12 mb-2">
+                <img src="images/images/repair2.jpg" alt="" class="img-fluid">
+            </div>
+
+        </div>
+    </div>
+    <div class="container bg-light">
+        <div class="row">
+            <div class="col-lg-12">
+                <h2 class="text-center bold">Tyre Fitting Near Me</h2>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid pt-3 pb-3 overflow-hidden">
+        <div class="container">
+            <div class="row mt-3">
+                <div class="col-lg-6 col-sm-12 mb-2 mt-3">
+                    <img src="images/images/tyrerepair.jpg" alt="" class="img-fluid" id="left">
+                </div>
+                <div class="col-lg-6 col-sm-12 mb-2 text" id="right">
+                    <h3 class="font-weight-bold">Professional Tyre Fitting at Your Doorstep</h3>
+                    <p>With our "tyre fitting near me" service, you can enjoy the convenience of professional tyre
+                        fitting without leaving your location. We offer a wide range of high-quality tyres, and our
+                        skilled technicians ensure a precise fit, guaranteeing your safety and vehicle performance.
+                        We understand that your time is valuable, and our tyre fitting service is designed to save you
+                        time and hassle. Whether you need new tyres or replacements, our "tyre fitting near me" service
+                        is here to make the process easy and stress-free.
+                    </p>
+                    <button class="btn mt-4" style="background-color:lightgreen; border:lightgreen;"><a
+                            href="tel:+447916312844">Give us a
+                            Call</a></button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container bg-light">
+        <div class="row">
+            <div class="col-lg-12">
+                <h2 class="text-center bold">Puncture Repair Near Me</h2>
+            </div>
+        </div>
+    </div>
+    <div class="container overflow-hidden">
+        <div class="row mt-4">
+
+            <div class="col-lg-6 col-sm-12 mb-2 text">
+                <h3 class="font-weight-bold"> Swift and Reliable Puncture Solutions</h3>
+                <p>Punctures are a common inconvenience, and our "puncture repair near me" service is here to resolve
+                    this issue swiftly and efficiently. Whether you're dealing with a slow leak or a more severe
+                    puncture, our experienced technicians are equipped to provide reliable puncture repair.
+                    We understand that punctures can happen at the most inconvenient times, and that's why our "puncture
+                    repair near me" service is available whenever you need it. Our goal is to get you back on the road
+                    without unnecessary delays, ensuring your tyres are in optimal condition.
+                </p>
+                <button class="btn mt-4 mb-4" style="background-color:lightgreen; border:lightgreen;"><a
+                        href="tel:+447916312844">Give us a
+                        Call</a></button>
+
+            </div>
+            <div class="col-lg-6 col-sm-12 mb-2">
+                <img src="images/images/image3page4.jpg" alt="" class="img-fluid">
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <div class="container bg-light">
+        <div class="row">
+            <div class="col-lg-12">
+                <h2 class="text-center bold">Mobile Tyre Fitting in Leeds</h2>
+            </div>
+        </div>
+    </div>
+    <div class="container overflow-hidden">
+        <div class="row mt-4">
+
+            <div class="col-lg-6 col-sm-12 mb-2">
+                <img src="images/Untitled design (86).png" alt="" class="img-fluid">
+            </div>
+            <div class="col-lg-6 col-sm-12 mb-2 text">
+                <h3 class="bold"> Local Expertise, Nationwide Reach</h3>
+                <p>For those in Leeds, our "mobile tyre fitting in Leeds" service offers the advantage of local
+                    expertise. We understand the unique requirements of the area and provide tailored services. However,
+                    our reach extends beyond Leeds, offering our mobile tyre services nationwide.
+                    Whether you're in Leeds or anywhere else, we're ready to assist you with your tyre needs. Our
+                    experienced team is well-versed in the specific needs of the Leeds area, and our "mobile tyre
+                    fitting in Leeds" service is designed to cater to local preferences and conditions.
+
+                </p>
+                <button class="btn mt-4 mb-4" style="background-color:lightgreen; border:lightgreen;"><a
+                        href="tel:+447916312844">Give us a
+                        Call</a></button>
+
+            </div>
+
+
+        </div>
+    </div>
+
+
+
+
+
+    <div class="container overflow-hidden">
+        <div class="row mt-4">
+
+            <div class="col-lg-6 col-sm-12 mb-2 text">
+                <h3 class="bold"> Emergency Support Whenever You Need It</h3>
+                <p>Tyre issues can occur at any time, day or night. That's why we offer a "24-hour tyre repair near me"
+                    service, because emergencies happen at all hours. Emergencies don't follow a schedule, and we're
+                    prepared to respond whenever you need us.
+                    Whether it's a midnight puncture or a weekend tyre replacement, we're ready to come to your location
+                    and ensure your vehicle's tyres are in top condition. Your safety is our priority, and our "24-hour
+                    tyre repair near me" service is designed to provide reliable and responsive support whenever you
+                    require it.
+
+
+                </p>
+                <button class="btn mt-4 mb-4" style="background-color:lightgreen; border:lightgreen;"><a
+                        href="tel:+447916312844">Give us a
+                        Call</a></button>
+
+            </div>
+            <div class="col-lg-6 col-sm-12 mb-2">
+                <img src="images/tyre (1).jpg" alt="" class="img-fluid">
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+    <div class="container bg-light">
+        <div class="row">
+            <div class="col-lg-12">
+                <h2 class="text-center bold">Mobile Puncture Repair</h2>
+            </div>
+        </div>
+    </div>
+    <div class="container overflow-hidden">
+        <div class="row mt-4">
+
+            <div class="col-lg-6 col-sm-12 mb-2">
+                <img src="images/images/Untitled design (82) (1).png" alt="" class="img-fluid">
+            </div>
+
+            <div class="col-lg-6 col-sm-12 mb-2 text">
+                <h3 class="bold"> On-the-Go Puncture Solutions</h3>
+                <p>Our "mobile puncture repair" service is designed to cater to your busy schedule. We come to you,
+                    whether you're at home, at work, or stuck on the roadside with a punctured tyre. Our puncture repair
+                    experts have the tools and experience to swiftly resolve your tyre issue, allowing you to continue
+                    your journey without major disruptions.
+                    We understand that your time is valuable, and our "mobile puncture repair" service is designed to
+                    save you time and hassle. Whether you're in a hurry or simply prefer the convenience of on-the-go
+                    puncture solutions, we're here to get you back on the road with minimal disruptions.
+
+
+                </p>
+                <button class="btn mt-4 mb-4" style="background-color:lightgreen; border:lightgreen;"><a
+                        href="tel:+447916312844">Give us a
+                        Call</a></button>
+
+            </div>
+
+
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <p>At IFIX TYRE, we're dedicated to ensuring your vehicle's tyres are in optimal condition. Contact us
+                    anytime for prompt, professional, and convenient mobile tyre services. We're here to provide you
+                    with top-notch tyre solutions that cater to your needs and schedule, ensuring your vehicle is always
+                    ready for the road.</p>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- mid section End-->
+    <!-- SVG -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <div class="floating-container">
+        <a href="Tel:">
+            <div class="floating-button"><svg style="height: 50px; width: 50px;" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24" id="Phone">
+                    <g data-name="Layer 2" fill="#ffd903" class="color000000 svgShape">
+                        <g data-name="phone" fill="#ffd903" class="color000000 svgShape">
+                            <rect width="10px" height="10px" opacity="0" fill="#ffd903" class="color000000 svgShape">
+                            </rect>
+                            <path
+                                d="M17.4 22A15.42 15.42 0 0 1 2 6.6 4.6 4.6 0 0 1 6.6 2a3.94 3.94 0 0 1 .77.07 3.79 3.79 0 0 1 .72.18 1 1 0 0 1 .65.75l1.37 6a1 1 0 0 1-.26.92c-.13.14-.14.15-1.37.79a9.91 9.91 0 0 0 4.87 4.89c.65-1.24.66-1.25.8-1.38a1 1 0 0 1 .92-.26l6 1.37a1 1 0 0 1 .72.65 4.34 4.34 0 0 1 .19.73 4.77 4.77 0 0 1 .06.76A4.6 4.6 0 0 1 17.4 22z"
+                                fill="#fff" class="color000000 svgShape"></path>
+                        </g>
+                    </g>
+                </svg></div>
+        </a>
+        <div class="element-container">
+
+
+
+        </div>
+    </div>
+    <!-- End Call SVG -->
+    <footer class="footer" style="background-color: #00739e;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-lg-4 col-md-12 mb-4 mb-md-0">
+                    <h2 class="footer-heading text-white">TyreFix</h2>
+                    <h6 class="text-white">"Revive, Refuel, and Roll - Your TyreFix Roadside Savior".</h6>
+                    <ul class="ftco-footer-social p-0">
+                        <li class="ftco-animate" style="background-color: #ffffff; border-radius: 50%;"><a
+                                href="https://twitter.com/home" data-toggle="tooltip" data-placement="top"
+                                title="Twitter"><span class="fa fa-twitter"
+                                    style="color: #00BD56; background-color:"></span></a></li>
+                        <li class="ftco-animate" style="background-color: #ffffff; border-radius: 50%;"><a
+                                href="https://www.facebook.com/profile.php?id=61552200209780" data-toggle="tooltip"
+                                data-placement="top" title="Facebook"><span class="fa fa-facebook"
+                                    style="color: #00BD56;"></span></a></li>
+                        <li class="ftco-animate" style="background-color: #ffffff; border-radius: 50%;"><a
+                                href="https://www.instagram.com/ifixtyre/" data-toggle="tooltip" data-placement="top"
+                                title="Instagrm"><span class="fa fa-instagram" style="color: #00BD56;"></span></a></li>
+                        <li class="ftco-animate" style="background-color: #ffffff; border-radius: 50%;"><a
+                                href="https://www.linkedin.com/feed/" data-toggle="tooltip" data-placement="top"
+                                title="Linkedin"><span class="fa fa-linkedin" style="color: #00BD56;"></span></a>
+                        </li>
+
+
+                    </ul>
+                </div>
+
+                <div class="col-md-4 col-lg-4 col-md-12 mb-4 mb-md-0">
+                    <h2 class="footer-heading text-white">Quick Links</h2>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="py-2 d-block text-white">Home</a></li>
+
+                        <li><a href="contact.php" class="py-2 d-block text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 col-lg-4 col-md-12 mb-4 mb-md-0">
+                    <h2 class="footer-heading text-white">Where We Are?</h2>
+                    <div class="block-23 mb-3">
+                        <ul>
+                            <li><span class="icon fa fa-map text-white"></span><span class="text text-white	"> 10-16
+                                    tiller
+                                    road,
+                                    canary wharf,
+                                    E14 8PX</span></li>
+                            <li><a href="tel:+447916312844"><span class="icon fa fa-phone text-white"></span><span
+                                        class="text text-white">+447916312844</span></a></li>
+                            <li><a href="#"><span class="icon fa fa-paper-plane text-white"></span><span
+                                        class="text text-white">info@ifixtyre.com</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <p class="copyright" style="color: #ffffff;">
+                        Copyright &copy;
+                        <script>document.write(new Date().getFullYear());</script> I Fix Tyre All rights reserved
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+    <!-- loader -->
+    <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
+            <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+            <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+                stroke="#F96D00" />
+        </svg></div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+        integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"
+        integrity="sha512-Ic9xkERjyZ1xgJ5svx3y0u3xrvfT/uPkV99LBwe68xjy/mGtO+4eURHZBW2xW4SZbFrF1Tf090XqB+EVgXnVjw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="animation.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/jquery.animateNumber.min.js"></script>
+    <script src="js/bootstrap-datepicker.js"></script>
+    <script src="js/jquery.timepicker.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/scrollax.min.js"></script>
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+    <script src="js/google-map.js"></script>
+    <script src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+
+
+</body>
+
+</html>
