@@ -5,7 +5,7 @@ body {
 
 p {
   color: #c41d9a;
-  font-weight: 300;
+  font-weight: 450;
 }
 
 h1,
@@ -85,9 +85,9 @@ h2 {
 }
 
 .site-blocks-cover .sub-text {
-  font-size: 1.4rem;
+  font-size: 1rem;
   color: gray;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 @media (max-width: 991.98px) {
@@ -149,7 +149,7 @@ h2 {
 }
 
 .site-blocks-cover .intro .heading {
-  margin-left: -150px;
+  margin-left:;
 }
 
 @media (max-width: 991.98px) {
