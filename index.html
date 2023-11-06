@@ -282,6 +282,17 @@
 			font-weight: bold;
 			color: #ffffff;
 		}
+		
+		.home .card-title {
+			font-size: 1.1rem;
+			
+
+		}
+		.home p {
+			font-size: 1rem;
+			font-weight: 400;
+
+		}
 
 		.home:hover {
 			background-color: #00739e;
@@ -344,8 +355,8 @@
 		}
 
 		.img-responsive {
-			width: 30px;
-			height: 30px;
+			width: 200px;
+			height: 100px;
 			border-radius: 50%;
 		}
 
@@ -501,7 +512,57 @@
 			line-height: 2;
 		}
 		.home .line2{
-			line-height: 2.1;
+			line-height: 2;
+		}
+		.cr h3{
+			font-size: 1.1rem;
+		}
+		.cr p{
+			font-weight: 400;
+		}
+
+		@media screen and (max-width: 600px) {
+			.cr h3 {
+
+				font-size: .9rem;
+			}
+
+			.cr p {
+
+font-size: 0.8rem;
+font-weight: 400;
+}
+
+			
+		}
+		@media screen and (max-width: 600px) {
+			.home:hover {
+			background-color: #00739e;
+			transform: scale(1);
+
+		}
+
+			
+		}
+		
+		@media screen and (max-width: 600px) {
+			.heading h1 {
+		font-size: 1.2rem;
+
+		}
+
+			
+		}
+		.wrap .abc p a{
+			font-size: 3vh;
+		}
+		@media screen and (max-width: 600px) {
+			.wrap .abc p a {
+		font-size: 0.9rem ;
+
+		}
+
+			
 		}
 	</style>
 	<!--  End call svg Styling -->
@@ -512,12 +573,12 @@
 	<div class="wrap" style="background-color: lightgreen; overflow-x: hidden;">
 		<div class=" container-fluid">
 			<div class="row">
-				<div class="col-lg-12  d-flex justify-content-end">
+				<div class="col-lg-12  d-flex justify-content-end abc">
 					<p class="mb-0 phone pl-md-2">
-						<a href="Tel:+447916312844" class="mr-2 " style="font-size:3vh; color: black;"><span class=" fa fa-phone
+						<a href="Tel:+447916312844" class="mr-2 " style=" color: black;"><span class=" fa fa-phone
 				  mr-1" style="color: black;"></span>
 							+447916312844</a>
-						<a href="mailto:contact@ifixtyre.com" style="font-size:3vh; color: black;"><span
+						<a href="mailto:contact@ifixtyre.com" style="color: black;"><span
 								class="fa fa-paper-plane mr-1 " style="color: black;"></span>
 							contact@ifixtyre.com</a>
 					</p>
@@ -790,12 +851,12 @@
 	</div>
 	<!-- ========== End Section about ========== -->
 
-	<div class="container-fluid mt-4 mb-5">
+	<div class="container-fluid mt-4 mb-5 py-4">
 		<div class="row">
 			<div class="col-lg-3 col-md-6 col-sm-12 mb-2">
 				<div class="card home">
 					<img src="images/images/pink1home.jpg" class="card-img-top" alt="cardpic">
-					<div class="card-body">
+					<div class="card-body ">
 						<h3 class="card-title">Expertise and Experience</h3>
 						<p class="card-text">At IFIX TYRE, our tyre service is built on a solid foundation of knowledge that covers every aspect of tyre maintenance. Our team brings a wealth of expertise and experience to every service we offer, ensuring precise and reliable solutions.</p>
 
@@ -809,7 +870,7 @@
 					<img src="images/images/pink2home.jpg" class="card-img-top" alt="cardpic">
 					<div class="card-body">
 						<h3 class="card-title">Reliability and Timeliness</h3>
-						<p class="card-text">Reliability and timeliness are at the core of our commitment to you. You're not just a customer – you're a valued part of our family. We ensure dependable and timely service to get you back on the road with confidence.
+						<p class="card-text line2">Reliability and timeliness are at the core of our commitment to you. You're not just a customer – you're a valued part of our family. We ensure dependable and timely service to get you back on the road with confidence.
 						</p>
 
 						<a href="tel:+447916312844" class="btn">GIve Us
@@ -895,7 +956,7 @@
 
 
 	<!-- testimonial -->
-	<section class="client pt-3 pb-5 overflow-hidden">
+	<section class="client pt-3 pb-5 py-5 overflow-hidden">
 		<div class="container">
 			<div class="row text-center">
 				<div class="col-lg-12 col-md-12 col-sm-12">
@@ -981,12 +1042,12 @@
 							</div>
 						</div>
 					</div>
-					<div class="controls push-right">
+					<!-- <div class="controls push-right mb-5">
 						<a class="left fa fa-chevron-left text-white btn btn btn-outline-light"
 							href="#carouselExampleCaptions" data-bs-slide="prev"></a>
 						<a class="right fa fa-chevron-right text-white btn btn btn-outline-light"
 							href="#carouselExampleCaptions" data-bs-slide="next"></a>
-					</div>
+					</div> -->
 				</div>
 			</div>
 		</div>
